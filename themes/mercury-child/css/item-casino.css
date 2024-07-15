@@ -1,0 +1,195 @@
+/* Top Rated Casinos */
+.casinos-title {
+  margin-bottom: 13px;
+}
+
+.casinos-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 12px;
+  height: auto;
+}
+
+.casinos-item .casino-code,
+.casinos-item .buttons-wrap {
+  margin-top: auto;
+}
+
+.casino-logo {
+  width: 100%;
+  height: auto;
+  min-height: 81px;
+  border-radius: 5px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.casino-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.casino-tag,
+.casino-rating {
+  position: absolute;
+  top: 13px;
+}
+
+.casino-tag {
+  left: 11px;
+}
+
+.casino-rating {
+  right: 11px;
+}
+
+.casino-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.casino-content-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.casino-content-item span {
+  display: block;
+  font-size: 10px;
+}
+
+.casino-code {
+  margin-bottom: 8px;
+}
+
+.casino-proposition {
+  margin-bottom: 10px;
+}
+
+.casino-proposition ul {
+  padding: 10px 10px 10px 20px;
+}
+
+.casino-proposition ul li {
+  font-size: 14px;
+  font-weight: 700;
+  list-style-type: disc;
+}
+
+/* Grundläggande stilar från item-casino.css */
+.item-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-textbox-blue);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.casino-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.casino-content {
+  width: 100%;
+  text-align: center;
+}
+
+.casino-content-item {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--primary-text);
+}
+
+.item-wrap.casino-proposition {
+  border: 2px solid var(--text-red);
+}
+
+.code.casino-code {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--button-green);
+  margin-bottom: 10px;
+}
+
+.buttons-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dark-link-button {
+  background-color: var(--button-yellow);
+}
+
+.dark-link-button:hover {
+  background-color: var(--button-yellow-hover);
+}
+
+.red-link-button {
+  background-color: var(--button-green);
+}
+
+.red-link-button:hover {
+  background-color: var(--button-green-hover);
+}
+
+/* Extra CSS som ska vara kvar enligt tidigare instruktioner */
+.casino-rating {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.casino-rating i {
+  color: var(--text-red);
+  margin: 0 2px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1500px) {
+  .casinos-item {
+    width: calc(33.33% - 24px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .casinos-item {
+    width: calc(50% - 24px);
+  }
+}
+
+@media (max-width: 768px) {
+  .casinos-item {
+    width: calc(100% - 24px);
+    margin: 0;
+  }
+}

@@ -1,0 +1,123 @@
+/* Slot item */
+.slots-items-wrap {
+  padding-top: 40px;
+  max-width: 1500px; /* Ändrad maxbredd */
+  margin: 0 auto;
+}
+
+.slot-item-wrap {
+  width: calc(25% - 24px);
+  margin: 0 12px 12px 12px;
+  padding: 13px 11px;
+  border-radius: 5px;
+  height: 200px; /* Justerat till en mer rektangulär form */
+  min-width: 240px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white); /* Ändra bakgrundsfärgen till helt vit */
+}
+
+.slot-item-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: var(--white); /* Ändra bakgrundsfärgen bakom bilderna till helt vit */
+  overflow: hidden; /* Se till att bilderna inte lämnar rutan */
+}
+
+.slot-item-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se till att bilderna fyller ut rutan */
+  border-radius: 5px; /* Se till att bilderna har samma hörnrundning som boxen */
+}
+
+.slot-item-tag {
+  top: 13px;
+  left: 11px;
+}
+
+.slot-item-rating {
+  top: 13px;
+  right: 11px;
+}
+
+.slot-item-play {
+  left: 50%;
+  bottom: 13px;
+  width: calc(100% - 13px);
+  transform: translateX(-50%);
+  opacity: 0; /* Dölj knappen */
+  transition: opacity 0.3s ease-in-out; /* Tillägg för smidig övergång */
+}
+
+.slot-item-wrap:hover .slot-item-play {
+  opacity: 1; /* Visa knappen vid hover */
+}
+
+.slot-item-tag,
+.slot-item-play,
+.slot-item-rating {
+  position: absolute;
+  z-index: 1;
+}
+
+/* Grundläggande stilar för .link-button.red-link-button.slot-item-play */
+.link-button.red-link-button.slot-item-play {
+  background-color: var(--button-green);
+  color: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.link-button.red-link-button.slot-item-play:hover {
+  background-color: var(--button-green-hover);
+}
+
+/* Anpassningar för mindre skärmar */
+@media (max-width: 1500px) {
+  .slots-items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .slot-item-wrap {
+    width: calc(33.33% - 16px); /* Anpassa bredden för mindre skärmar */
+    height: 150px; /* Justerat till en mer rektangulär form för mindre skärmar */
+  }
+}
+
+@media (max-width: 768px) {
+  .slot-item-wrap {
+    width: calc(50% - 16px); /* Anpassa bredden för mindre skärmar */
+    height: 150px; /* Justerat till en mer rektangulär form för mindre skärmar */
+  }
+}
+
+@media (max-width: 480px) {
+  .slots-items-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .slot-item-wrap {
+    width: calc(100% - 16px); /* Anpassa bredden för ännu mindre skärmar */
+    height: 120px; /* Justerat till en mer rektangulär form för de minsta skärmarna */
+    margin: 0;
+  }
+}

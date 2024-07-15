@@ -1,0 +1,149 @@
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s, transform 0.3s;
+    margin-left: 20px; /* Add left margin to match the right */
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1.1); /* Highlight the active slide */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+/* Styles for slot-item-wraps */
+.slots-items-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px; /* Standard distance between slides */
+}
+
+.slot-item-wrap {
+    flex: 0 0 auto;
+    width: calc(25% - 40px); /* Adjusted for standard distance */
+    box-sizing: border-box;
+    margin: 20px; /* Adjusted for standard distance */
+    border: 1px solid var(--primary-text);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect for smooth change */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow to create depth */
+}
+
+.slot-item-wrap:hover {
+    transform: translateY(-5px); /* Lift a bit on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Add shine effect */
+.slot-item-wrap {
+    border: 2px solid var(--white);
+    background: var(--background-textbox-blue);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), inset 0 10px 30px rgba(255,255,255,0.3), inset 0 2px 2px rgba(255,255,255,0.2);
+}
+
+@media (max-width: 1500px) {
+    .slot-item-wrap {
+        width: calc(33.333% - 40px); /* Adjusted for standard distance */
+    }
+}
+
+@media (max-width: 992px) {
+    .slot-item-wrap {
+        width: calc(50% - 40px); /* Adjusted for standard distance */
+    }
+}
+
+@media (max-width: 768px) {
+    .slot-item-wrap {
+        width: calc(100% - 40px); /* Adjusted for standard distance */
+    }
+}
+
+/* Other styles */
+.card {
+    flex: 0 0 auto;
+    width: 100px; /* Samma bredd som bilden */
+    height: 100px; /* Samma höjd som bilden */
+    margin: 5px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    background: var(--background-textbox-blue);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1), inset 0 10px 30px rgba(255,255,255,0.3), inset 0 2px 2px rgba(255,255,255,0.2);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Se till att bilden fyller hela kortet */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .card-cas-tag a {
+    margin-left: 3px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media (max-width: 1500px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}
+
+@media (max-width: 855px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}
+
+@media (max-width: 525px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}
+
+@media (max-width: 1500px) {
+    /* Remove margins on smaller screens to utilize full width */
+    .swiper-slide,
+    .slot-item-wrap,
+    .card {
+        margin: 0;
+    }
+}

@@ -1,0 +1,16 @@
+/****** BONUSES PAGE START ******/
+
+.bonuses-wrap {
+  max-width: 1500px;
+}
+
+.bonuses-content {
+  display: flex;
+  align-items: start;
+}
+
+.bonuses-archive-items-wrap .bonuses-archive-items-wrap {
+  width: calc(33.33%);
+}
+
+/****** BONUSES PAGE END ******/

@@ -1,0 +1,185 @@
+/* Swiper */
+.swiper-container {
+    width: 100%;
+    max-width: 1500px; /* Set max width */
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.swiper-button-next {
+    right: 2%;
+}
+
+.swiper-button-prev {
+    left: 2%;
+}
+
+/* Tabs */
+.tabs-wrap ul.tabs {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Justera för att alla tabs ska få plats */
+    width: 100%; /* Fixera bredden */
+    overflow: hidden; /* Dölja överflödigt innehåll */
+}
+
+.tabs-wrap ul.tabs li {
+    cursor: pointer;
+    color: var(--white);
+    font-size: calc(1.25rem + 0.5vw); /* Adaptiv fontstorlek */
+    flex: 1; /* Se till att alla tabs får lika mycket utrymme */
+    text-align: center; /* Centrera texten i varje tab */
+    font-weight: 600;
+}
+
+.tabs-wrap ul.tabs li.current {
+    color: var(--white);
+    border-bottom: calc(4px + 0.2vw) solid var(--text-red); /* Adaptiv border-bottom */
+}
+
+@media (max-width: 767px) {
+    .tabs-wrap ul.tabs li {
+        font-size: calc(1rem + 0.5vw); /* Adaptiv fontstorlek */
+        padding-bottom: 0.5rem;
+        border-bottom: calc(2px + 0.2vw) solid transparent; /* Adaptiv border-bottom */
+    }
+
+    .tabs-wrap ul.tabs li.current {
+        border-bottom: calc(2px + 0.2vw) solid var(--text-red); /* Adaptiv border-bottom */
+    }
+}
+
+/* Ny CSS för att hantera hover-effekten på tabbar */
+.tabs .tab-link:hover {
+    color: var(--text-red);
+    border-bottom: calc(2px + 0.2vw) solid var(--text-red); /* Adaptiv border-bottom */
+}
+
+.tabs .tab-link.current {
+    color: var(--text-red);
+    border-bottom: calc(2px + 0.2vw) solid var(--text-red); /* Adaptiv border-bottom */
+}
+
+.tabs .tab-link.hovered {
+    color: var(--text-red);
+    border-bottom: calc(2px + 0.2vw) solid var(--text-red); /* Adaptiv border-bottom */
+}
+
+/* Stilar för slot-item-wraps */
+.slots-items-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px; /* Adjusted for proportional spacing */
+}
+
+.slot-item-wrap {
+    flex: 0 0 auto;
+    width: calc(25% - 40px); /* Adjusted for proportional spacing */
+    box-sizing: border-box;
+    margin: 20px; /* Adjusted for proportional spacing */
+    border: 1px solid var(--primary-text);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.slot-item-wrap:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1500px) {
+    .slot-item-wrap {
+        width: calc(33.333% - 40px); /* Adjusted for proportional spacing */
+    }
+}
+
+@media (max-width: 992px) {
+    .slot-item-wrap {
+        width: calc(50% - 40px); /* Adjusted for proportional spac
+        
+        ng */
+    }
+}
+
+@media (max-width: 768px) {
+    .slot-item-wrap {
+        width: calc(100% - 40px); /* Adjusted for proportional spacing */
+        margin: 0; /* Remove margin on smaller screens */
+    }
+}
+
+/* Övriga stilar */
+.card {
+    flex: 0 0 auto;
+    width: 100px; /* Samma bredd som bilden */
+    height: 100px; /* Samma höjd som bilden */
+    margin: 5px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    background: var(--background-textbox-blue);
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Se till att bilden fyller hela kortet */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .card-cas-tag a {
+    margin-left: 3px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+@media (max-width: 1057px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}
+
+@media (max-width: 855px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}
+
+@media (max-width: 525px) {
+    .card {
+        flex: 0 0 auto;
+        width: 100px; /* Samma bredd som bilden */
+        height: 100px; /* Samma höjd som bilden */
+    }
+}

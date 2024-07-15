@@ -1,0 +1,337 @@
+/*
+Theme Name:   Mercury Child
+Description:  Mercury Child Theme
+Author:       Watson
+Template:     mercury
+Version:      0.0.1
+License:      GNU General Public License v3 or later
+License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:  mercury
+*/
+/* Grundläggande stilar för rubriker och länkar inom rubriker */
+h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: 700;
+    -webkit-backface-visibility: hidden;
+    color: #151515;
+}
+
+/* Färger och grundläggande variabler */
+:root {
+  --button-yellow: 0px 0px 15px 0px #f7bd018c;
+  --button-yellow-hover: #c8a717;
+  --button-green: #1cd08b;
+  --button-green-hover: #1c8d62;
+  --background-site-blue: linear-gradient(90deg,rgb(4,28,87) 0%,rgb(3,36,125) 100%);
+
+  --text-red: #ff1654;
+  --text-red-hover: #c81645;
+  --background-textbox-blue: #1b233d;
+  --white: #ffffff;
+  --primary-text: #151515;
+}
+/* Grundläggande stilar för HTML och body */
+html,
+body {
+    overflow: unset;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Allmänna stilar */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+/* Säkerställ att alla sidor, element och sektion samt liknande, anpassas till maxbredden 1500px */
+@media (max-width: 1500px) {
+    .container {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Extra stilar för bättre responsivitet */
+    @media (max-width: 768px) {
+        /* Ta bort marginaler på mindre skärmar för att utnyttja hela bredden */
+        .section-wrap,
+        .single-page-wrap {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+/* Generell layout */
+.single-page-wrap {
+    padding: 0;
+}
+
+.section-wrap {
+    margin-bottom: 0;
+    position: relative;
+    max-width: 1500px;
+}
+
+.list-items-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    flex-direction: column;
+}
+
+.list-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.title-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.title-wrap h1 {
+    font-weight: 700;
+    font-size: 2.369em;
+    line-height: 1;
+    margin-right: 0;
+    margin-top: -0.25rem;
+}
+
+.filters-wrap {
+    padding: 0;
+}
+
+.filters-wrap h5 {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.filters-mobile-wrap {
+    width: 250px;
+    min-width: 250px;
+    margin-right: 0;
+}
+
+.cut-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ellipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.blocks-wrap {
+    border-radius: 0;
+}
+
+.bordered-block {
+    padding: 0;
+    border: none;
+}
+
+.strikethrough-text {
+    color: var(--middle-grey);
+    text-decoration: line-through;
+}
+
+.vertical-centered {
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.vertical-horizontal-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Innehåll och länkar */
+.space-page-content {
+    line-height: normal;
+}
+
+.space-page-content a {
+    text-decoration: none;
+    line-height: normal;
+    font-weight: 700;
+}
+
+.space-page-content a:hover {
+    color: inherit;
+}
+
+.space-page-content ol,
+.space-page-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+.space-page-content ul li {
+    list-style: none;
+    padding: 0;
+}
+
+/* Betyg och taggar */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating i {
+    cursor: pointer;
+}
+
+.rating strong {
+    margin-left: 2px;
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--white);
+}
+
+.tag-item {
+    padding: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    width: max-content;
+}
+
+.tag-item a {
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: var(--primary-text);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 45px;
+    overflow: hidden;
+}
+
+.tag-item a:not(:last-child) {
+    margin-right: 0;
+}
+
+/* Visa alla titlar */
+.view-all-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.view-all-title a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.view-all-title i {
+    margin-left: 10px;
+}
+
+/* Header */
+.space-header-ins {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.space-header-logo-ins {
+    margin: 0;
+}
+
+.space-header-logo a {
+    padding-top: 0;
+}
+
+.space-header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.space-header-menu ul.main-menu {
+    padding-right: 0;
+}
+
+.space-header-menu ul.main-menu li a {
+    font-weight: 700 !important;
+}
+
+.space-page-content a {
+    font-weight: 700;
+}
+
+/* Rubriker och tillhörande element */
+
+/* Säkerställ att alla sidor, element och sektion samt liknande, anpassas till maxbredden 1500px */
+@media (max-width: 1500px) {
+    .container {
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Extra stilar för bättre responsivitet */
+    @media (max-width: 768px) {
+        /* Ta bort marginaler på mindre skärmar för att nyttja hela bredden */
+        .section-wrap,
+        .tabs-wrap {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+/* Archive Title Box */
+
+
+
+.space-archive-title-box-h1 {
+    margin: 0;
+}
+
+.space-archive-title-box-h1 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 3.157em;
+    line-height: 1.1em;
+    color: white;
+}
+
+/* Grundläggande stilar för sektioner */
+.section-wrap {
+    margin-bottom: 0;
+    position: relative;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+}

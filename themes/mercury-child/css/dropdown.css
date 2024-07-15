@@ -1,0 +1,155 @@
+/* Dropdown */
+.dropdown-wrap {
+  width: 100%;
+  padding: 15px 0;
+  border-top: 1px solid var(--background-textbox-blue);
+  border-bottom: 1px solid var(--background-textbox-blue);
+  margin: 0 auto;
+  position: relative;
+  user-select: none;
+}
+
+.dropdown-wrap .default-option,
+.dropdown-wrap .dropdown-options {
+  background: var(--background-textbox-blue);
+}
+
+.dropdown-wrap.white .default-option,
+.dropdown-wrap.white .dropdown-options {
+  background: var(--white);
+}
+
+.dropdown-wrap .default-option li,
+.dropdown-wrap .dropdown-options li {
+  padding: 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text);
+}
+
+.dropdown-wrap .default-option {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
+.dropdown-wrap .default-option:before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 9px);
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: url('../assets/icons/icon_arrow_down.svg') 50% 50% no-repeat;
+}
+
+.dropdown-wrap .dropdown-options {
+  z-index: 900;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-bottom: 1px solid var(--background-textbox-blue);
+  padding-bottom: 15px;
+}
+
+.dropdown-wrap .dropdown-options li:hover {
+  background: transparent;
+}
+
+.dropdown-wrap.active .dropdown-options {
+  display: block;
+}
+
+.dropdown-wrap.active .default-option:before {
+  transform: rotate(-180deg);
+}
+
+/* Nytt från dropdown.css */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* Sätt bredden till 100% för att fylla föräldern */
+  max-width: 1500px; /* Maximal bredd för att undvika att den blir för stor */
+  margin: 10px 0; /* Marginal för separation från andra element */
+  border: 1px solid var(--background-textbox-blue); /* Kantlinje runt dropdown */
+  border-radius: 5px; /* Rundade hörn för en modern look */
+  background-color: var(--white); /* Vit bakgrund */
+}
+
+.dropdown-content {
+  display: none; /* Initialt gömd */
+  position: absolute; /* Absolut positionering för att visas ovanpå annat innehåll */
+  background-color: var(--white); /* Vit bakgrund */
+  min-width: 160px; /* Minsta bredd för dropdown-innehåll */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Skugga för en svävande effekt */
+  z-index: 1; /* Sätt hög z-index för att visas över annat innehåll */
+  border: 1px solid var(--background-textbox-blue); /* Kantlinje runt innehållet */
+  border-radius: 5px; /* Rundade hörn */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Visa innehållet vid hovring */
+}
+
+.dropdown-content a {
+  color: var(--primary-text); /* Primär textfärg */
+  padding: 12px 16px; /* Inre marginal för länkar */
+  text-decoration: none; /* Ta bort understrykning */
+  display: block; /* Blockvisning för att fylla hela bredden */
+}
+
+.dropdown-content a:hover {
+  background-color: var(--background-textbox-blue); /* Ljusgrå bakgrund vid hovring */
+}
+
+/* Extra CSS som ska vara kvar enligt tidigare instruktioner */
+.dropdown-toggle {
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  background-color: var(--button-yellow);
+}
+
+.dropdown-menu {
+  display: none;
+  padding: 10px;
+  background-color: var(--white);
+}
+
+.dropdown-toggle.active {
+  background-color: var(--button-yellow-hover);
+}
+
+/* Anpassa till maxbredden 1500px */
+@media (max-width: 1500px) {
+  body,
+  .dropdown-wrap,
+  .dropdown,
+  .dropdown-content,
+  .dropdown-toggle,
+  .dropdown-menu {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+}
+
+/* Gör alla element responsiva */
+@media (max-width: 767px) {
+  body,
+  .dropdown-wrap,
+  .dropdown,
+  .dropdown-content,
+  .dropdown-toggle,
+  .dropdown-menu {
+    margin: 0;
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,42 @@
+/****** CASINOS ARCHIVE PAGE START ******/
+
+/* Add a wrapper class for the casinos archive page */
+.casinos-archive-page {
+  max-width: 1500px; /* Set max width to 1500px */
+}
+
+/* Available Casinos */
+.available-casinos-wrap {
+  max-width: 1500px; /* Set max width to 1500px */
+}
+
+.avalilable-casinos-content {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap; /* Allow items to wrap to new line on smaller screens */
+}
+
+.available-casinos-items-wrap .casinos-item {
+  width: calc(33.33%);
+  max-width: calc(1500px / 3); /* Set max width for each item */
+}
+
+@media (max-width: 1500px) {
+  .available-casinos-items-wrap .casinos-item {
+    width: calc(50%); /* Reduce width to 50% on smaller screens */
+    max-width: calc(1500px / 2); /* Set max width for each item on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .casinos-archive-page,
+  .available-casinos-wrap {
+  }
+
+  .available-casinos-items-wrap .casinos-item {
+    width: calc(100%); /* Set width to 100% on smaller screens */
+    max-width: calc(1500px); /* Set max width for each item on smaller screens */
+  }
+}
+
+/****** CASINOS ARCHIVE PAGE END ******/

@@ -1,0 +1,141 @@
+/* Grundläggande stilar för indikatorobjektens behållare */
+.indicator-items-wrap {
+  display: flex; /* Flexbox-layout för att arrangera indikatorobjekten */
+  justify-content: space-around; /* Fördela utrymme jämnt runt objekten */
+  margin: 20px 0; /* Marginal för separation från andra element */
+  padding: 10px; /* Inre marginal för padding */
+  max-width: 1500px; /* Maxbredd för att fylla ut de flesta skärmar */
+  margin-left: auto; /* Centrera innehållet horisontellt */
+  margin-right: auto; /* Centrera innehållet horisontellt */
+}
+
+/* Grundläggande stilar för varje enskilt indikatorobjekt */
+.indicator-item-wrap {
+  display: flex; /* Flexbox-layout för att arrangera innehåll inuti indikatorobjektet */
+  align-items: center; /* Centrera innehållet vertikalt */
+  border-radius: 5px; /* Rundade hörn för en modern look */
+  padding: 10px; /* Inre marginal för padding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Skugga för en svävande effekt */
+  max-width: 100%; /* Anpassa bredden till förälderelementet */
+}
+
+/* Grundläggande stilar för cirkeln inom varje indikatorobjekt */
+.indicator-item-circle {
+  width: 50px; /* Fast bredd för cirkeln */
+  height: 50px; /* Fast höjd för cirkeln */
+  border-radius: 50%; /* Gör elementet cirkulärt */
+  color: white; /* Textfärg för innehållet inuti cirkeln */
+  display: flex; /* Flexbox-layout för att centrera innehållet */
+  align-items: center; /* Centrera innehållet vertikalt */
+  justify-content: center; /* Centrera innehållet horisontellt */
+  font-size: 18px; /* Textstorlek för innehållet */
+  font-weight: bold; /* Fet stil för texten */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Skugga för cirkeln */
+}
+
+/* Grundläggande stilar för informationsdelen inom varje indikatorobjekt */
+.indicator-item-info {
+  margin-left: 10px; /* Marginal till vänster för separation från cirkeln */
+  font-size: 16px; /* Textstorlek för informationstexten */
+  color: var(--primary-text); /* Textfärg */
+}
+
+/* Extra CSS som ska vara kvar enligt tidigare instruktioner */
+.indicator-item-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Nytt från indicators.css */
+.indicator-item-wrap:not(:last-child) {
+  margin-right: 3.5rem;
+}
+
+.indicator-item-circle {
+  border-radius: 50%;
+  width: 3.5rem;
+  min-width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid var(--light-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-text);
+}
+
+.indicator-item-info {
+  padding: 0.5rem 0;
+  margin-left: 1rem;
+}
+
+.indicator-item-info h5 {
+  font-weight: 700;
+  color: var(--primary-text);
+  white-space: nowrap;
+}
+
+.indicator-item-info p {
+  font-weight: 700;
+  color: var(--middle-grey);
+  line-height: 1;
+  font-size: 0.825rem;
+}
+
+@media (max-width: 1500px) {
+  .indicator-items-wrap {
+    flex-wrap: wrap; /* Wrapa objekten vid behov */
+  }
+
+  .indicator-item-wrap {
+    width: calc(33.33% - 1rem); /* Anpassa bredden till 33.33% av förälderelementet */
+    margin-right: 1rem; /* Marginal mellan objekten */
+  }
+}
+
+@media (max-width: 991px) {
+  .indicator-items-wrap {
+    justify-content: space-between; /* Fördela utrymme jämnt mellan objekten */
+  }
+
+  .indicator-item-wrap {
+    width: calc(50% - 1rem); /* Anpassa bredden till 50% av förälderelementet */
+  }
+
+  .indicator-item-wrap:not(:last-child) {
+    margin-right: 1.5rem; /* Marginal mellan objekten */
+  }
+
+  .indicator-item-circle,
+  .indicator-item-wrap h5,
+  .indicator-item-wrap p {
+    font-size: 0.875rem; /* Anpassa textstorleken */
+  }
+}
+
+@media (max-width: 767px) {
+  .indicator-item-wrap:not(:last-child) {
+    margin-right: 1rem; /* Marginal mellan objekten */
+  }
+
+  .indicator-item-info {
+    margin: 0;
+    text-align: center; /* Centrera texten */
+  }
+
+  .indicator-item-info h5 {
+    white-space: unset; /* Ta bort nowrap för rubriken */
+  }
+
+  .indicator-item-circle,
+  .indicator-item-wrap h5,
+  .indicator-item-wrap p {
+    font-size: 0.875rem; /* Anpassa textstorleken */
+  }
+}

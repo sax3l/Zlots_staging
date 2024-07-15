@@ -1,0 +1,73 @@
+/****** SLOTS PAGE START ******/
+
+.slots-wrap {
+  max-width: 1500px;
+}
+
+.slots-content {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.slots-filters .accordion-wrap .set:last-child {
+}
+
+.slots-filters .accordion-wrap .set:last-child > p {
+  border-bottom: 1px solid var(--primary-text);
+}
+
+.slots-archive-items-wrap .slot-item-wrap {
+  width: calc(33.33% - 24px);
+  max-width: calc((1500px - 48px) / 3);
+}
+
+@media (max-width: 1500px) {
+  .slots-wrap {
+    max-width: 100%;
+  }
+
+  .slots-content {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  .slots-filters .accordion-wrap .set:last-child {
+  }
+
+  .slots-filters .accordion-wrap .set:last-child > p {
+    border-bottom: 1px solid var(--primary-text);
+  }
+
+  .slots-archive-items-wrap .slot-item-wrap {
+    width: calc(50% - 16px);
+    max-width: calc((100% - 32px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .slots-wrap {
+    max-width: 100%;
+  }
+
+  .slots-content {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  .slots-filters .accordion-wrap .set:last-child {
+  }
+
+  .slots-filters .accordion-wrap .set:last-child > p {
+    border-bottom: 1px solid var(--primary-text);
+  }
+
+  .slots-archive-items-wrap .slot-item-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/****** SLOTS PAGE END ******/

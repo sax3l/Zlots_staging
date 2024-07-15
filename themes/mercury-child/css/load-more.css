@@ -1,0 +1,147 @@
+/* Load more */
+/* Grundläggande stilar för .load-more-wrap */
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  max-width: 1428px; /* Set max width */
+  width: 100%; /* Make it responsive */
+}
+
+/* Grundläggande stilar för .load-more-button */
+.load-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff; /* Standard blå färg */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3; /* Mörkare blå färg vid hovring */
+}
+
+.load-more-button:disabled {
+  background-color: #cccccc; /* Grå färg för inaktiverad knapp */
+  cursor: not-allowed;
+}
+
+/* Stilar för Load More-knappen */
+#load-more-slots {
+  display: inline-block;
+  margin-top: 20px; /* Justera avståndet ovanför knappen */
+  padding: 12px 24px; /* Utfyllnad */
+  border: none; /* Ingen kantlinje */
+  border-radius: 4px; /* Runda hörn */
+  text-decoration: none; /* Ingen understrykning */
+  color: #ffffff; /* Textfärg */
+  background-color: #ECC31F; /* Bakgrundsfärg */
+  cursor: pointer; /* Pilmarkör vid hovring */
+  transition: background-color 0.3s ease; /* Smidig övergång för bakgrundsfärg */
+  max-width: 1428px; /* Set max width */
+  width: 100%; /* Make it responsive */
+}
+
+#load-more-slots:hover {
+  background-color: #c8a717; /* Mörkare gul färg vid hovring */
+}
+
+/* Stil för etiketter */
+.label {
+  color: white; /* Sätter textfärgen till vit */
+}
+
+/* Laddningsöverlägg */
+.loading-overlay {
+  position: fixed; /* Låser överlägget så att det täcker hela skärmen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Mörkgrå bakgrund */
+  z-index: 9999; /* Högt z-index för att säkerställa att det täcker annat innehåll */
+  display: none; /* Dold som standard */
+  justify-content: center;
+  align-items: center; /* Använder Flexbox för centrering */
+}
+
+/* Stil för spinner */
+.loading-overlay .spinner {
+  border: 20px solid rgba(255, 255, 255, 0.3); /* Ljusare kantfärg för spinner */
+  border-top-color: #fff; /* Vit färg för den roterande delen */
+  border-radius: 50%;
+  width: 120px; /* Öka storleken */
+  height: 120px; /* Öka storleken */
+  animation: spin 1s infinite linear; /* Animering */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Stil för Load More-omslag */
+.load-more-wrap {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  font-size: 1rem;
+  width: 200px;
+  font-weight: 600;
+  color: #ECC31F;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  max-width: 1428px; /* Set max width */
+  width: 100%; /* Make it responsive */
+}
+
+/* Stil för Load More-ikon */
+.load-more-icon {
+  display: block;
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url('../assets/icons/icon_load_more.svg') 50% 50% no-repeat;
+  transition: ease-in-out 0.5s;
+}
+
+/* Hover-effekter för Load More-omslag */
+.load-more-wrap:hover {
+  color: var(--primary-red);
+}
+
+.load-more-wrap:hover .load-more-icon {
+  background: url('../assets/icons/icon_load_more_red.svg') 50% 50% no-repeat;
+}
+
+/* Animering för laddning */
+@-webkit-keyframes loading {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes loading {
+  from {
+      -moz-transform: rotate(0deg);
+  }
+  to {
+      -moz-transform: rotate(360deg);
+  }
+}
+
+.loading {
+  -webkit-animation: loading 2s linear infinite;
+  -moz-animation: loading 2s linear infinite;
+}

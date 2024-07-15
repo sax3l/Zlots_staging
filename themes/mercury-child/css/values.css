@@ -1,0 +1,62 @@
+/* Values Negative Positive */
+.values-items-wrap {
+  padding: 10px;
+  display: flex;
+  max-width: 1500px; /* Set max width to 1500px */
+  margin: 0 auto; /* Center align the container */
+}
+
+.values-items-wrap h5 {
+  margin-bottom: 0.5rem;
+}
+
+.values-item-wrap {
+  display: flex;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+}
+
+.values-item-wrap li {
+  margin-right: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.values-item-wrap li:before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.values-item-wrap li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.values-item-wrap.positive li:before {
+  background: url(../assets/icons/icon_plus_green.svg) 50% 50% no-repeat;
+}
+
+.values-item-wrap.negative li:before {
+  background: url(../assets/icons/icon_minus_red.svg) 50% 50% no-repeat;
+}
+
+@media (max-width: 767px) {
+  .values-items-wrap {
+    padding: 0.25rem;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+
+  .values-item-wrap {
+    width: 100%; /* Set width to 100% on smaller screens */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .values-item-wrap li {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    padding-left: 1rem; /* Adjust left padding for smaller screens */
+  }
+}

@@ -1,0 +1,154 @@
+/****** SINGLE BONUS PAGE START ******/
+
+/* Single Bonus Top Info */
+.single-bonus-top-info-wrap {
+  display: flex;
+  max-width: 1428px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.single-bonus-top-info-wrap .left-side-wrap {
+  width: 300px;
+  min-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.single-bonus-top-info-wrap .left-side-wrap .logo-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(21, 21, 21, 20%);
+}
+
+.single-bonus-top-info-wrap .left-side-wrap .logo-wrap img {
+  width: 100%;
+}
+
+.single-bonus-top-info-wrap .right-side-wrap {
+  width: 100%;
+}
+
+.single-bonus-top-info-wrap .right-side-wrap .title-wrap,
+.single-bonus-top-info-wrap .right-side-wrap .date-excerpt-wrap {
+  justify-content: space-between;
+}
+
+.single-bonus-top-info-wrap .right-side-wrap .date-excerpt-wrap .date {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.single-bonus-top-info-wrap .right-side-wrap .date-excerpt-wrap .date i {
+  display: flex;
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  width: 44px;
+  height: 44px;
+  background-color: var(--light-grey);
+}
+
+/* Single Bonus Middle Info */
+.single-bonus-middle-info-wrap {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1428px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desktop-right-side-values {
+  position: sticky;
+  top: 125px;
+  width: 320px;
+  min-width: 320px;
+}
+
+.mobile-right-side-values {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.single-bonus-middle-info-wrap .left-side-wrap {
+  width: 100%;
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap ul.tabs {
+  justify-content: start;
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .tab-content {
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .tab-content-item {
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .tab-content-item h5 {
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .tab-content-item a {
+  text-decoration: underline;
+  color: var(--red);
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .tab-content-item a:hover {
+  color: var(--primary-text);
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .gambling-tab-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .gambling-items-wrap {
+  width: 50%;
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .gambling-items-wrap .tab-content-item {
+}
+
+.single-bonus-middle-info-wrap .tabs-wrap .gambling-items-wrap .tab-content-item i {
+  color: var(--primary-green);
+}
+
+.rating-wrap h3 {
+}
+
+/****** SINGLE BONUS PAGE START ******/
+
+/* Responsive Styles */
+@media (max-width: 1428px) {
+  .single-bonus-top-info-wrap,
+  .single-bonus-middle-info-wrap {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-bonus-top-info-wrap .left-side-wrap {
+  }
+  
+  .desktop-right-side-values {
+    display: none;
+  }
+  
+  .mobile-right-side-values {
+    display: block;
+  }
+  
+  .single-bonus-middle-info-wrap .tabs-wrap .gambling-items-wrap {
+    width: 100%;
+  }
+}

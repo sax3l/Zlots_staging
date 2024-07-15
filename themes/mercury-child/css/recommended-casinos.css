@@ -1,0 +1,69 @@
+/* Slider  https://stackoverflow.com/questions/8849684/wordpress-jquery-ui-css-files */
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  border: 1px solid var(--primary-text);
+  background: var(--primary-text);
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.5em;
+  margin-left: -0.6em;
+}
+
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1rem;
+  height: 1rem;
+  cursor: default;
+  -ms-touch-action: none;
+  touch-action: none;
+  border-radius: 50%;
+}
+
+.ui-widget-content {
+  border: 1px var(--background-textbox-blue);
+  background: var(--background-textbox-blue);
+  color: var(--white);
+}
+
+.ui-slider-horizontal {
+  height: 2px;
+}
+
+.ui-slider {
+  position: relative;
+  text-align: left;
+}
+
+.slider-values {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.range-slider-wrap {
+  padding: 0 10px;
+}
+
+.range-slider-title {
+  margin: 10px;
+  display: block;
+}
+
+@media (max-width: 1500px) {
+  .slider-values {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-values {
+    margin: 0;
+  }
+}

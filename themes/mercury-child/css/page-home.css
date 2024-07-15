@@ -1,0 +1,74 @@
+/****** HOME PAGE START ******/
+.space-archive-title-box {
+  display: none;
+}
+
+/* Main Search */
+.main-search-wrap {
+  position: relative;
+  border-radius: 80px;
+  max-width: 1500px;
+}
+
+.main-search-wrap input[type='text'] {
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+}
+
+.search-button {
+  position: absolute;
+  top: calc(50% - 24px);
+  right: 15px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(../assets/icons/icon_search.svg) 50% 50% no-repeat;
+}
+
+/* Slots banner */
+.slots-banner-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slots-banner-wrap .red-link-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* This block needs to add into the admin advanced setting */
+.info-block-wrap {
+  max-width: 1500px;
+  max-height: 325px;
+  overflow-x: auto;
+}
+
+/****** HOME PAGE END ******/
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 1500px) {
+  /* Adjust max-width for specific elements */
+  .space-archive-title-box,
+  .main-search-wrap,
+  .info-block-wrap {
+    max-width: 100%;
+  }
+
+  /* Adjust position for specific elements */
+  .search-button {
+    right: 10px;
+  }
+
+  /* Adjust font size for specific elements */
+  .slots-banner-wrap .red-link-button {
+    font-size: 14px;
+  }
+}
+
+/* Add responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+}
